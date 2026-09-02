@@ -581,21 +581,19 @@ def main():
         # --------------------------------------------------------
 
         context = webrtc_streamer(
-            key="exercise-analysis",
+    key="exercise-analysis",
 
-            mode=WebRtcMode.SENDRECV,
+    mode=WebRtcMode.SENDRECV,
 
-            video_processor_factory=VideoProcessorClass,
+    video_processor_factory=VideoProcessorClass,
 
-            rtc_configuration=rtc_configuration,
+    rtc_configuration=rtc_configuration,
 
-            media_stream_constraints={
-                "video": True,
-                "audio": False,
-            },
-
-            async_processing=True,
-        )
+    media_stream_constraints={
+        "video": True,
+        "audio": False,
+    },
+)
 
         # --------------------------------------------------------
         # SYNC METRICS
